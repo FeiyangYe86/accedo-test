@@ -44,6 +44,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 ## Un-implemented Features
 * Image caching.
 * Styling files haven't been centralised yet.
+* Haven't been deployed to live site.
 
 ## Known Bugs
 * Since cover images of movie entries haven't been cached, the application seems always to request for the images from these url. However since the mock api returns different images every time, the cover images of watched history and those of movie list would look different...
