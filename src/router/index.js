@@ -16,6 +16,11 @@ export default new Router({
       path: '/history',
       name: 'History',
       component: History
+    },
+    {
+      path: '/video/:id',
+      name: 'Video',
+      component: Home
     }
   ]
 })
