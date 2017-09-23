@@ -2,9 +2,6 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-// Import all components
-import './components'
-
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -14,10 +11,11 @@ new Vue({
   template: '<App/>',
   components: { App },
   methods: {
+    /**
+     * Redirect to homepage after exited full screen mode
+     */
     handleFullScreenChange () {
-      let fullscreenElm = window.document.webkitFullscreenElement
-      console.log(fullscreenElm)
-      if (fullscreenElm == null) {
+      if (window.document.webkitFullscreenElement == null) {
         this.$router.push('/')
       }
     }
@@ -25,6 +23,10 @@ new Vue({
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('webkitfullscreenchange', this.handleFullScreenChange)
+      /* Register all error handlers here */
+      window.addEventListener('error', function (e) {
+        console.log(e)
+      })
     })
   }
 })

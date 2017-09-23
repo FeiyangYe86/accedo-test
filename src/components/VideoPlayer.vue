@@ -11,22 +11,22 @@
 <script>
 export default {
   props: {
+    // Sources of video
     contents: {
       type: Array,
       default: () => []
     },
-    fullScreen: {
-      type: Boolean,
-      default: false
-    },
+    // Callback to be executed after video ended
     endedCb: {
       type: Function,
       default: () => {}
     },
+    // To show controllers or not
     controls: {
       type: Boolean,
       default: true
     },
+    // Automatically start playing or not
     autoplay: {
       type: Boolean,
       default: true

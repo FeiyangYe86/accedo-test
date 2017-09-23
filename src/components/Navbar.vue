@@ -1,10 +1,6 @@
 <template>
   <div class="main-nav">
     <span class="navbar-title">{{ title }}</span>
-    <ul class="item-list">
-      <router-link to="/">Home</router-link>
-      <router-link to="/history">History</router-link>
-    </ul>
   </div>
 </template>
 
