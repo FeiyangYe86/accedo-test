@@ -177,9 +177,11 @@ export default {
     window.addEventListener('keydown', event => {
       // If the pressed button is ArrowLeft(37) or ArraowRight(39), shift active item
       if (event.keyCode === 37 || event.keyCode === 39) {
+        event.preventDefault()
         this.$refs[this.controlling].shiftActiveItem(event.keyCode - 38)
       // If ArrowUp(38) or ArrowDown(40) pressed, shift the carousel being controlled
       } else if (event.keyCode === 38 || event.keyCode === 40) {
+        event.preventDefault()
         this.shiftControlling(event.keyCode > 38)
         this.$refs[this.controlling].shiftActiveItem(1)
       // If ENTER pressed, play the video and insert into history
